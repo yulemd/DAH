@@ -1,0 +1,466 @@
+html {
+    /*background-image: url(../img/building.jpeg);
+    background-repeat: no-repeat;*/
+    background-color: #ffffff;
+    background-position: center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 1800px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1a1a1d;
+}
+/*
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+#preloader.hide-preloader {
+    animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+    display: none;
+}
+
+@keyframes hidePreloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+  }
+
+/* CARD SLIDER */
+
+.myCardSlides {
+    display: none;
+    width: 100%;
+    min-height: 512px;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+      /* Кнопки next & previous*/
+      .prevCard, .nextCard {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color:#999999;
+      font-weight: 100;
+      font-size: 72px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      }
+      /* Измените положение "next button" */
+      .nextCard {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      }
+      /* Добавьте черный фоновый цвет с небольшой прозрачностью*/
+      .prevCard:hover, .nextCard:hover {
+      background-color: rgba(1,22,31,0.79);
+      }
+      
+      .cardDot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #999999;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active, .cardDot:hover {
+      background-color: #111111;
+      }
+      /* Выцветание анимации */
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      /* Для маленьких экранов увеличьте размер текста */
+      @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+      }
+
+/* CARD SLIDER */
+
+/* SLIDER */
+
+.mySlides {display: none}
+      .slide-slide {vertical-align: bottom;}
+      .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      }
+      /* Кнопки next & previous*/
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      }
+      /* Измените положение "next button" */
+      .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      }
+      /* Добавьте черный фоновый цвет с небольшой прозрачностью*/
+      .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      }
+      /* Подпись под изображением */
+      .text-slide {
+      color: #ffffff;
+      font-size: 16px;
+      text-shadow: 5px 5px 6px rgb(18, 19, 18);
+      padding: 8px 12px;
+      position: absolute;
+      top: -68px;
+      width: 100%;
+      text-align: center;
+      }
+      /* Number text (1/3 etc) */
+      .numbertext {
+      color: #ffffff;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      }
+      /* Точки/маркеры/указатели */
+      .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #999999;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active, .dot:hover {
+      background-color: #111111;
+      }
+      /* Выцветание анимации */
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      /* Для маленьких экранов увеличьте размер текста */
+      @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+      }
+
+/* SLIDER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+video {
+    filter: brightness(30%);
+}
+
+.test {
+    position: absolute;
+    width: 100%;
+    top: 12vw; 
+}
+
+.test1 {
+    font-size: 5vw;
+    color: #ffffff;
+    text-shadow: 5px 5px 6px #001a2e;
+    text-decoration: transparent;
+    text-align: center;
+}
+
+.play-icon {
+    width: 18%;
+    position: absolute;
+    left: 50%;
+    margin-left: -9%;
+    top: 18vw;
+    cursor: pointer;
+}
+
+.button-style {
+    background-color: rgba(1, 22, 31, 0.99);
+}
+
+/*h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(24, 22, 22);
+    text-shadow: 4px 4px 5px rgb(142, 250, 150);
+    padding: 12px;
+}*/
+
+a {
+    text-decoration: none;
+}
+
+/*.navbar {
+    width: 90%;
+    min-width: 700px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background-image: url(../img/pngwing-9.png);
+    background-color: rgba(3, 31, 9, 0.808);
+    border-radius: 12px;
+}
+
+.menu {
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: expanded;
+    color: #f1f1f7;
+    text-shadow: 2px 2px 3px rgb(3, 29, 51);
+    margin: 4px;
+}
+
+.menu:hover {
+    color: rgb(31, 29, 29);
+    background-color: rgb(242, 245, 248);
+    text-shadow: 0px 0px 0px rgb(3, 29, 51);
+}*/
+
+/* COMMON */
+
+.content-img {
+    width: 240px;
+    height: 240px;
+}
+
+.slash-plus-light {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 48px 0px;
+}
+
+.slash-plus-dark {
+    width: 100%;
+    background-color: rgba(1, 22, 31, 0.99);
+    padding: 48px 0px;
+}
+
+.line-light, .line-dark {
+    width: 44%;
+    line-height: 1px;
+    margin: auto;
+}
+
+.line-light { border-bottom: #ffffff solid 1px; }
+
+.line-dark { border-bottom: rgba(1, 22, 31, 0.99) solid 1px; }
+
+.h3-light, .h3-dark {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;   
+}
+
+.h3-light { color: #ffffff; }
+
+.h3-dark { color: #1d1b1b; }
+
+.text-light, .text-dark {
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 28px;
+    font-stretch: expanded;
+    padding-left: 4px;
+}
+
+.text-light {
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 3px 3px 4px rgb(12, 12, 12);   
+}
+
+.text-dark {
+    font-weight: 500;
+    color: #1d1b1b;
+}
+
+.card-text-dark {
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    font-stretch: expanded;
+    color: #1d1b1b;
+}
+
+.card-video {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.card-logo {
+    min-width: 320px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/interwiev-1.jpeg);
+    background-repeat: no-repeat;
+}
+
+/* COMMON */
+
+/* WINDOWS */
+
+.about-house, .members, .participation {
+    width: 100%;
+    min-height: 512px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.about-house {
+    background-image: url(../img/scape-2.png);
+    background-color: rgba(1, 22, 31, 0.99);
+}
+
+.residents {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.flow {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(../img/scape-2.png);
+    background-color: rgba(1, 22, 31, 0.99);
+}
+
+.participation {
+    background-image: url(../img/scape-2.png);
+    background-color: rgba(1, 22, 31, 0.99);
+}
+
+/* WINDOWS */
+ 
+.contacts {
+    width: 90%;
+    margin: auto;
+    padding-left: 72px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-house, 
+    .residents, 
+    .members, 
+    .participation, 
+    .myCardSlides {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prevCard {
+        left: 0;
+    }
+}

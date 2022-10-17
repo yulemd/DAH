@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДІМ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preload" href="./img/Rhombus.gif" as="image">
+</head>
+<body>
+    <!--
+    <div id='preloader'>
+      <img src="./img/Rhombus.gif" alt="preloader">
+    </div>
+    -->
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <header>
+        <video id="Video1" width="100%" src="./video/FullSizeRender.MOV" controls Autoplay=autoplay loop>
+            Your browser does not support the video tag.
+        </video>
+        <button id="play" onclick="vidplay()" class="button-style">
+            <img src="./img/pngwing-play.png" alt="play" class="play-icon">
+        </button>
+        <div id="greeting" class="test">
+          <h2 class="test1">Привіт! Мене звуть Дім</h2>
+        </div>
+    </header>
+
+    <a name="About_hous"></a>
+    <div class="slash-plus-dark">
+        <div class="line-light"></div>
+        <div>
+            <h3 class="h3-light">Привіт! Мене звуть Дім</h3>
+        </div>
+        <div class="line-light"></div>
+    </div>
+    <div class="about-house">
+        <img src="./img/home.png" alt="image" class="content-img">
+        <p class="text-light">За документами я будинок за адресою місто Ірпінь, вулиця Давидовича, 42.
+            Та мої мешканці, їх у мене понад 300, називають мене просто «Дім».          
+            Мене збудували в 2015 році, аби я став другою домівкою для багатьох переселенців з Донецької та Луганської областей. </br></br>           
+            В березні 2022 року на мене посипалися запалювальні снаряди, які вщент спалили дах, побили фасади, спричинили пожежі в 
+            квартирах. Загалом цей обстріл зруйнував мене на 40%. </br>          
+            Я ховав своїх мешканців у підвальних приміщеннях під час окупації. По моєму двору та дитячому майданчику орки їздили танками. </br></br>            
+            Та я не впадаю у відчай, як і мої мешканці. Вони мене люблять: помили мене від сажі, прибрали огарки. Тут, до речі, дуже 
+            дякую волонтерам. Потім почали збір коштів на моє відновлення. На сьогодні зібрано 2,2 млн грн із 6 млн, які потрібно для 
+            відбудову даху. </br></br>           
+            Але тут час – наш ворог: дах потрібно збудувати до морозів. Тож у мене на це залишилося близько місяця. 
+            </p>
+    </div>
+
+    <a name="Residents"></a>
+    <div class="slash-plus-light">
+        <div class="line-dark"></div>
+        <div>
+            <h3 class="h3-dark">Хочу познайомити вас з деякими моїми мешканцями</h3>
+        </div>
+        <div class="line-dark"></div>
+    </div>
+
+    <div class="residents">
+      <div class="myCardSlides fade">
+        <div>
+        <p class="card-text-dark">Це – Петро. Він……. </br>
+            
+            А ось  Альона та маленька Елізабет. </br>
+            
+            Це – Іван, один з тих, хто втратив через росіян свою домівку ще в 2014 році. ……
+        </p>
+        </div>
+        <div class="card-logo">
+            <img src="./img/pngwing-play.png" alt="logo" class="card-video">
+        </div>
+      </div>
+      <div class="myCardSlides fade">
+        <p class="card-text-dark">Це – Іван. Він……. </br>
+            
+            А ось  Альона та маленька Елізабет. </br>
+            
+            Це – Петро, один з тих, хто втратив через росіян свою домівку ще в 2014 році. ……
+        </p>
+        <div class="card-logo">
+            <img src="./img/pngwing-play.png" alt="logo" class="card-video">
+        </div>
+      </div>
+      <div class="myCardSlides fade">
+        <p class="card-text-dark">Це – Альона. Він……. </br>
+            
+            А ось  Петро та маленька Елізабет. </br>
+            
+            Це – Іван, один з тих, хто втратив через росіян свою домівку ще в 2014 році. ……
+        </p>
+        <div class="card-logo">
+            <img src="./img/pngwing-play.png" alt="logo" class="card-video">
+        </div>
+      </div>
+      <a class="prevCard" onclick="plusCardSlides(-1)">&#10094;</a>
+      <a class="nextCard" onclick="plusCardSlides(1)">&#10095;</a>
+            <!--<img src="./img/roof1.jpg" alt="image" class="content-img">-->
+            <div style="text-align:center">
+              <span class="cardDot" onclick="currentCardSlide(1)"></span> 
+              <span class="cardDot" onclick="currentCardSlide(2)"></span> 
+              <span class="cardDot" onclick="currentCardSlide(3)"></span> 
+            </div>
+    </div>
+
+    <a name="Flow"></a>
+    <div class="slash-plus-dark">
+      <div class="line-light"></div>
+        <div>
+            <h3 class="h3-light">Зараз йдуть роботи</h3>
+        </div>
+        <div class="line-light"></div>
+    </div>
+    <div class="flow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="text-slide">Я казав, що вже потрохи відбудовуюсь?</div>
+                    <div class="numbertext">1 / 6</div>
+                    <img src="./img/building.jpeg" style="width:100%" class="slide-slide">
+                </div>
+                <div class="mySlides fade">
+                    <div class="text-slide">Зараз мене «підперезали» армопоясом – це конструкція, яка… На фото вона має вигляд сірого бордюру по периметру даху.</div>
+                    <div class="numbertext">2 / 6</div>
+                    <img src="./img/roof.jpg" style="width:100%" class="slide-slide">
+                </div>
+                <div class="mySlides fade">
+                    <div class="text-slide">Робітники зараз встановлюють балки…</div>
+                    <div class="numbertext">3 / 6</div>
+                    <img src="./img/video1.jpg" style="width:100%" class="slide-slide">
+                </div>
+                <div class="mySlides fade">
+                    <div class="text-slide">Наступним етапом буде….</div>
+                    <div class="numbertext">4 / 6</div>
+                    <img src="./img/home.png" style="width:100%" class="slide-slide">
+                </div>
+                <div class="mySlides fade">
+                    <div class="text-slide">Потім….</div>
+                    <div class="numbertext">5 / 6</div>
+                    <img src="./img/home.png" style="width:100%" class="slide-slide">
+                </div>
+                <div class="mySlides fade">
+                    <div class="text-slide">Фінішна пряма - ……</div>
+                    <div class="numbertext">6 / 6</div>
+                    <img src="./img/home.png" style="width:100%" class="slide-slide">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!--<br>-->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+    </div>
+    
+    <a name="Members"></a>
+    <div class="slash-plus-light">
+        <div class="line-dark"></div>
+        <div>
+            <h3 class="h3-dark">Подарунки</h3>
+        </div>
+        <div class="line-dark"></div>
+    </div>
+    <div class="members">
+        <p class="text-dark">Мої мешканці віддають на мій ремонт все, що мають. Але, на жаль, цього замало. Тож вони залучають небайдужих. </br></br>
+
+            Так, Юридична група LCF подарувала на відновлення мого даху 500 000 грн. 
+        </p>
+        <img src="./img/roof1.jpg" alt="image" class="content-img">
+    </div>
+    <a name="Participation"></a>
+    <div class="slash-plus-dark">
+        <div class="line-light"></div>
+        <div>
+            <h3 class="h3-light">Прохання</h3>
+        </div>
+        <div class="line-light"></div>
+    </div>
+    <div class="participation">
+        <img src="./img/roof1.jpg" alt="image" class="content-img">
+        <p class="text-light">Моїм мешканцям дуже потрібна ваша допомога у відновленні домівки. Це так.</br></br>
+            Переказуйте на рахунок…….
+        </p>
+    </div>
+    <a name="Contacts"></a>
+    <footer class="contacts"> 
+        <p class="text-dark">КОНТАКТИ: Дзвоніть мені :)</p>
+    </footer>
+
+    <!--<div class="navbar">
+        <a href="#About_hous"><span class="menu">ПРО ДІМ</span></a>
+        <a href="#Residents"><span class="menu">ІСТОРІЇ МЕШКАНЦІВ</span></a>
+        <a href="#Flow"><span class="menu">ХІД РОБІТ</span></a>
+        <a href="#Members"><span class="menu">ПАРТНЕРИ/ДОНОРИ</span></a>
+        <a href="#Participation"><span class="menu">ЯК ДОПОМОГТИ</span></a>
+        <a href="#Contacts"><span class="menu">КОНТАКТИ</span></a>
+    </div>-->
+
+    <!-- Script -->
+    <script src="./js/scroll-top.js"></script>
+    <script src="./js/card_slider.js"></script>
+    <script src="./js/slider.js"></script>
+    <!--<script src="./js/preloader.js"></script>-->
+    <script src="./js/video-play.js"></script>
+</body>
+</html>
