@@ -247,6 +247,7 @@ header {
 
 video {
     filter: brightness(60%);
+    width: 100%;
 }
 
 .test {
@@ -281,20 +282,14 @@ video {
 }*/
 
 .help-menu {
-    /*position: absolute;
-    width: 14%;
-    top: 28vw;
-    left: 43%;*/
-    margin-top: 4vw;
+    margin-top: 3vw;
     margin-left: 42vw;
-    width: 190px;
-    height: 40px;
-    font-size: 24px;
+    width: 17vw;
+    height: 4vw;
+    font-size: 2vw;
     font-weight: 400;
     font-stretch: expanded;
     border: 1px solid #fcfcfc;
-    /*text-shadow: 2px 2px 3px rgb(3, 29, 51);*/
-    padding: 6px 0  0 14px;
     background-color: #001a2e;
 }
 
@@ -329,7 +324,7 @@ a {
 
 .navbar {
     width: 100%;
-    min-width: 700px;
+    min-width: 70vw;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -364,8 +359,7 @@ a {
 /* COMMON */
 
 .content-img {
-    width: 505px;
-    height: 300px;
+    width: 36vw;
     margin: 0 20px;
 }
 
@@ -431,7 +425,7 @@ a {
 }
 
 .card-text-dark {
-    max-width: 460px;
+    max-width: 420px;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -485,7 +479,7 @@ a {
     flex-direction: column;
 }
 .members-list {
-    width: 75%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     height: fit-content;
@@ -507,7 +501,7 @@ a {
     padding-left: 72px;
     font-size: 20px;
 }
-
+/*
 @media only screen and (max-width: 600px) {
     .about-house, 
     .residents, 
@@ -522,7 +516,7 @@ a {
         left: 0;
     }
 }
-
+*/
 
 /* Galary */
 
@@ -548,4 +542,35 @@ a {
         -webkit-box-shadow:0px 0px 30px gray; /*Webkit: тени*/
         -moz-box-shadow:0px 0px 30px gray; /*Mozilla: тени*/
         opacity: 1;
+        }
+
+        @media screen and (max-width: 1130px) {
+            .residents, .myCardSlides {
+                flex-direction: column;
+                text-align: center;
+            }
+            .prevCard {
+                left: 0;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .about-house {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .text-dark {
+                line-height: 28px;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            .navbar {
+                flex-direction: column;
+                margin-top: 80px;
+            }
+            .hovergallery img{
+            margin: 0;
+            }
         }
